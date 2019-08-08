@@ -1,0 +1,19 @@
+{% extends 'base.html'%} {% import 'macros.html' as macro%} {% import 'bootstrap/wtf.html' as wtf %} {% block styles%} {{ super() }}
+<!--super() function tells Jinja not to override any code that is defined in the block-->
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}" > {% endblock %} {% block content %}
+    <br> <br> <br>
+    <div class="container"style= "background-color: Purple;">
+        <div class="col-md-6 ">
+            <img src="/static/photos/work.jpg " style=" height:370px;" style="padding-bottom:300px;">   
+        </div> 
+        <br> <br> 
+        <div class="col-md-6 "  style="background-color: rgb(228, 144, 95);">
+            <p  style="font-size: 20px; float:-400px; "> <strong style="font-size: 60px;">R</strong>esearch shows that we need to take a break and decompress so we can be at our best at work—and at home. Maybe we should ask if the life we’re working so hard to create is fun to live? </p>
+    <br> <br> 
+        <a class="btn btn-primary text-center text-danger " href="">Workit sessions
+        </a>
+        <hr>
+        </div>
+    </div>
+
+{% endblock %}

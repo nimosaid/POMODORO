@@ -1,14 +1,19 @@
 {% extends 'base.html'%} {% import 'macros.html' as macro%} {% import 'bootstrap/wtf.html' as wtf %} {% block styles%} {{ super() }}
 <!--super() function tells Jinja not to override any code that is defined in the block-->
-<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}"> {% endblock %} {% block content %}
-    <div class="container"  style="padding-right:300px;">
-        <img src="/static/photos/break.jpg " style=" height:400px;">    
-    </div>
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}" > {% endblock %} {% block content %}
     <br> <br> <br>
-    <div class=" col-md-10 col-md-offset-1 col-sm-12">
+    <div class="container"style= "background-color: Purple;">
+        <div class="col-md-6 ">
+            <img src="/static/photos/break.jpg " style=" height:370px;" style="padding-bottom:300px;">   
+        </div> 
+        <br> <br> 
+        <div class="col-md-6 "  style="background-color: rgb(228, 144, 95);">
+            <p  style="font-size: 20px; float:-400px; "> <strong style="font-size: 60px;">I’</strong>ve missed more than 9000 shots in my career. I’ve lost almost 300 games. 26 times I’ve been trusted to take the game winning shot and missed. I’ve failed over and over and over again in my life. And that is why I succeed. </p>
+    <br> <br> 
         <a class="btn btn-primary text-center text-danger " href="">What you want to do on your break?
         </a>
         <hr>
+        </div>
     </div>
 
 {% endblock %}
