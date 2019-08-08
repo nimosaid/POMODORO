@@ -46,3 +46,24 @@ def profile(uname):
     return redirect(url_for('main.profile',uname=uname))
 
     return render_template("profile/profile.html", user = user)
+
+@main.route('/breaktime', methods=['GET', 'POST'])
+def breaktime():
+    '''
+    Function the returns what the user plans to do during breaktime
+    '''
+    return render_template('breaktime.html')
+
+@main.route('/worksession', methods=['GET', 'POST'])
+def worksession():
+    '''
+    Function the returns what the user plans to do during breaktime
+    '''
+    return render_template('worksession.html')
+
+@main.route('/timeforwork', methods=['GET', 'POST'])
+def timeforwork():
+    '''
+    Function the returns what the user plans to do during time for work.
+    '''
+    return render_template('time_for_work.html')
